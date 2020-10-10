@@ -1,13 +1,7 @@
 /* Compute the sum of an array of integers. */
-function sumOfIntegers(arr) {
-	let sum = 0 
-	for(i = 0; i < arr.length; i++) {
-	sum = sum + arr[i];
-}
-	console.log('The sum is: ' + sum)
+const sum = function(arr) {
+	if (arr.length <= 0) return 0;
+	return arr.pop() + sum(arr);
 }
 
-sumOfIntegers([2, 5, 6, 9, 13]);
-
-
-
+console.log('The sum is: ' + sum([2, 5, 6, 10]));
